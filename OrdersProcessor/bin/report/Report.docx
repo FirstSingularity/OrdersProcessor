@@ -1,0 +1,17 @@
+(Number of Orders, Multiple Threaded Time, Single Threaded Time) (in milliseconds)
+
+(6, 13478, 20866)
+(13, 65725, 87026)
+(25, 123494, 137723)
+(50, 267486, 292092)
+(100, 441332, 513171)
+(200, 830747, 1018826)
+(400, 1611357, 2121939)
+
+To display the effect of running code with a multithreaded implementation rather than a single threaded one,
+I increased the number of orders taken by a factor of 2 each cycle. The disparity in times between the single 
+and multithreaded implementations continue to grow from 6 orders all the way to 400 orders (I did not go above 400
+for the sake of my computer). This trend is the result of the overhead related to multithreading. As the number of
+orders increases, that overhead starts to become negligible and the difference in speed is more clearly seen.
+The multithreaded implementation is faster because it can use the processing power of the computer to a higher
+capacity because it can allocate extra power at hand to other threads.
